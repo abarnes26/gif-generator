@@ -12,11 +12,12 @@ describe "user signs up for account" do
           expect(current_path).to eq(new_user_path)
 
           fill_in "user[username]", with: "Username1"
+          fill_in "user[email]", with: "email@fake.com"
           fill_in "user[password]", with: "password1"
 
           click_on "Create User"
 
-          expect(page).to have_content("Welcome Username1")
+          expect(page).to have_content("Welcome to your Gif Generator Username1")
         end
       end
     end
