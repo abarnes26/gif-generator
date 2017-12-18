@@ -29,7 +29,7 @@ Use the GiphyApi to generate gifs.
 [ ] Users cannot create favorites for other users.
 [ ] Users cannot create new categories – only the admin can do that.
 [ ] Users cannot create gifs – only the admin can do that.
-[ ] Visitors (non-registered users) can create user accounts.
+[X] Visitors (non-registered users) can create user accounts.
 
 #### Optional Extensions
 
