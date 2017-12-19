@@ -1,0 +1,9 @@
+<h3> All Gifs by Category </h3>
+
+<%= link_to "Generate New Gif", new_admin_gif_path %>
+
+<h4> Here are the Gifs currently in the database </h4>
+
+<% @gifs.each do |gif| %>
+  <img src="<%= gif.image_path%>">
+<%end%>

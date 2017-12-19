@@ -31,6 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'pry'
+gem 'launchy'
 gem 'GiphyClient'
 
 group :development, :test do

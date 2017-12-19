@@ -1,0 +1,10 @@
+<h3> Select a new Category to generate a gif </h3>
+
+<%= form_for [:admin, @gif] do |f| %>
+
+  <%= f.label :category_id %>
+  <%= f.select :category_id, @categories.collect { |category| category.name } %>
+
+  <%= f.submit %>
+
+<%end %>

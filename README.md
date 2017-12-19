@@ -19,8 +19,8 @@ Use the GiphyApi to generate gifs.
 #### Categories
 
 [ ] Gifs belong to a category (category is the original word that was searched for by the admin).
-[ ] categories can be created by a logged-in admin user (regular logged in users cannot create categories).
-[ ] categories can be destroyed by a logged-in admin user (regular logged in users cannot destroy categories).
+[X] categories can be created by a logged-in admin user (regular logged in users cannot create categories).
+[X] categories can be destroyed by a logged-in admin user (regular logged in users cannot destroy categories).
 
 #### Authentication and Authorization
 
