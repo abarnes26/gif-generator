@@ -5,11 +5,18 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
 
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show] do
+    resources :gifs, only: [:index, :show] do
+      resources :favorites, only: [:index, :show, :new, :create, :destroy]
+    end
+  end
 
   resources :categories, only: [:index, :show] do
-    resources :gifs, only: [:index, :show]
+    resources :gifs, only: [:index, :show] do
+    end
   end
+
+  resources :gifs, only: [:index, :show]
 
   namespace :admin do
     resources :categories, only: [:index, :new, :create, :destroy, :show]

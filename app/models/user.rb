@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
-  has_many :favorites, foreign_key :user_id
+  has_many :favorites
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
@@ -16,5 +16,6 @@ class User < ApplicationRecord
     else
       flash[:failure] = "Sorry, your email or password was incorrect"
       redirect_to "./login"
+    end
   end
 end

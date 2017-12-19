@@ -1,4 +1,7 @@
-class Favorites < ApplicationController
+class FavoritesController < ApplicationController
+
+  def index
+  end
 
   def new
     @favorite = Favorite.new
@@ -8,16 +11,16 @@ class Favorites < ApplicationController
     @favorite = Favorite.new(favorite_params)
     if @favorite.save
       flash[:success] = "This gif has been added to your favorites!"
-      redirect_to current_path
+      redirect_to gifs_path
     else
-      flash[:failure] = "Sorry, something went wrong, please select a different gif"
-      redirect_to current_path
+      flash[:notice] = "Sorry, something went wrong. Please select a different gif"
+      redirect_to gifs_path
     end
   end
 
   private
 
     def favorite_params
-      params.require(:favorite).permit(:user_id, :gif_id)
+      params.permit(:gif_id, :user_id)
     end
 end
