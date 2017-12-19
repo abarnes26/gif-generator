@@ -4,7 +4,7 @@
 
 #### Gifs
 
-[ ] Admins can generate gifs by entering a one-word search term in field and then clicking “generate gif”. This should create a new gif in the database. This feature is not available to regular users.
+[X] Admins can generate gifs by entering a one-word search term in field and then clicking “generate gif”. This should create a new gif in the database. This feature is not available to regular users.
 Gifs should have an image_path. See above “Images” in project #1 for more info on implementing images.
 Use the GiphyApi to generate gifs.
 
@@ -18,7 +18,7 @@ Use the GiphyApi to generate gifs.
 
 #### Categories
 
-[ ] Gifs belong to a category (category is the original word that was searched for by the admin).
+[X] Gifs belong to a category (category is the original word that was searched for by the admin).
 [X] categories can be created by a logged-in admin user (regular logged in users cannot create categories).
 [X] categories can be destroyed by a logged-in admin user (regular logged in users cannot destroy categories).
 
