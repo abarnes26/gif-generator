@@ -9,7 +9,7 @@ describe "User visits categories index page" do
                          password:  "boom",
                          role: 1)
 
-      category = Category.create(name: "Help")
+      category = Category.create(name: "dog")
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
       visit admin_gifs_path
@@ -18,7 +18,7 @@ describe "User visits categories index page" do
 
       expect(current_path).to eql(new_admin_gif_path)
 
-      select "Help", :from => "gif[category_id]"
+      select "dog", :from => "gif[category_id]"
 
       click_button "Create Gif"
 

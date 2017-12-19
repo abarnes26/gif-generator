@@ -27,8 +27,8 @@ Use the GiphyApi to generate gifs.
 [ ] Users need to log in to see their favorited gifs.
 [ ] Users can only see their own favorited gifs – they should not be able to visit another user’s page.
 [ ] Users cannot create favorites for other users.
-[ ] Users cannot create new categories – only the admin can do that.
-[ ] Users cannot create gifs – only the admin can do that.
+[X] Users cannot create new categories – only the admin can do that.
+[X] Users cannot create gifs – only the admin can do that.
 [X] Visitors (non-registered users) can create user accounts.
 
 #### Optional Extensions

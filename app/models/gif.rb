@@ -1,6 +1,7 @@
 class Gif < ApplicationRecord
   validates :image_path, presence: true, uniqueness: true
   belongs_to :category
+  has_many :favorites, foreign_key :gif_id
 
 
   def self.generate(name)
