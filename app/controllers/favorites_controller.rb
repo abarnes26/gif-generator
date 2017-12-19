@@ -1,7 +1,11 @@
 class FavoritesController < ApplicationController
 
   def index
-    @favorites = Favorite.where(user_id: current_user.id)
+    if current_user
+       @favorites = Favorite.where(user_id: current_user.id)
+    else
+      redirect_to new_user_path
+    end
   end
 
   def new
