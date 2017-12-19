@@ -4,7 +4,7 @@
 <h3> Here are the categories that have been created so far... </h3>
 <ul>
   <% @categories.each do |category| %>
-  <li><%= category.name %> </li>
+  <li><%= link_to category.name, admin_category_path(category) %> </li>
   <%end%>
 </ul>
 

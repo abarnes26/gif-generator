@@ -18,6 +18,16 @@ class Admin::CategoriesController < Admin::BaseController
     end
   end
 
+  def show
+    @category = Category.find(params[:id])
+  end
+
+  def destroy
+    category = Category.find(params[:id])
+    category.destroy
+    redirect_to admin_categories_path
+  end
+
   private
 
     def category_params
