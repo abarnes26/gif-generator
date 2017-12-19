@@ -7,8 +7,12 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :show] do
     resources :gifs, only: [:index, :show] do
-      resources :favorites, only: [:index, :show, :new, :create, :destroy]
+      resources :favorites, only: [:new, :create]
     end
+  end
+
+  resources :users do
+    resources :favorites, only: [:index, :show, :destroy]
   end
 
   resources :categories, only: [:index, :show] do

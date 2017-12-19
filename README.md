@@ -10,7 +10,7 @@ Use the GiphyApi to generate gifs.
 
 #### Favoriting
 
-[ ] Regular users can mark a gif as “favorite”.
+[X] Regular users can mark a gif as “favorite”.
 [ ] Regular users can see a list of all of the gifs they’ve marked as favorites.
 [ ] Regular users cannot delete a gif; they can only “unfavorite” it for themselves.
 [ ] Regular users should be able to see all gifs sorted by category.
