@@ -11,15 +11,7 @@ describe "User visits categories index page" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
       visit admin_categories_path
-
-      click_link "Create New Category"
-
-      fill_in "category[name]", with: "Pandas"
-
-      click_button "Create Category"
-
-      expect(current_path).to eq(admin_categories_path)
-      expect(page).to have_content("Pandas")
+      expect(page).to have_content("Admin Categories")
     end
   end
 end

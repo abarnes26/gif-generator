@@ -1,1 +1,12 @@
 <h1>Admin Categories</h1>
+
+
+<h3> Here are the categories that have been created so far... </h3>
+<ul>
+  <% @categories.each do |category| %>
+  <li><%= category.name %> </li>
+  <%end%>
+</ul>
+
+
+<%= link_to "Create New Category", new_admin_category_path %>
