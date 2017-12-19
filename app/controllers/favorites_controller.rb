@@ -9,13 +9,17 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    @favorite = Favorite.new(favorite_params)
-    if @favorite.save
-      flash[:success] = "This gif has been added to your favorites!"
-      redirect_to gifs_path
+    if current_user
+      @favorite = Favorite.new(favorite_params)
+      if @favorite.save
+        flash[:success] = "This gif has been added to your favorites!"
+        redirect_to gifs_path
+      else
+        flash[:notice] = "Sorry, something went wrong. Please select a different gif"
+        redirect_to gifs_path
+      end
     else
-      flash[:notice] = "Sorry, something went wrong. Please select a different gif"
-      redirect_to gifs_path
+      redirect_to new_user_path
     end
   end
 

@@ -4,6 +4,10 @@
   <%= category.name %><br>
   <% category.gifs.each do |gif|%>
     <img src="<%= gif.image_path%>">
-    <%= button_to "Favorite!", user_gif_favorites_path(current_user, gif), :method=>:post  %>
+    <% if current_user %>
+      <%= button_to "Favorite!", user_gif_favorites_path(current_user, gif), :method=>:post  %>
+    <% else %>
+      <%= button_to "Favorite!", new_user_path, method: :get %>
+    <%end%>
   <%end%>
 <%end%>
