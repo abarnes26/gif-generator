@@ -24,7 +24,7 @@ Use the GiphyApi to generate gifs.
 
 #### Authentication and Authorization
 
-[ ] Users need to log in to see their favorited gifs.
+[X] Users need to log in to see their favorited gifs.
 [ ] Users can only see their own favorited gifs – they should not be able to visit another user’s page.
 [ ] Users cannot create favorites for other users.
 [X] Users cannot create new categories – only the admin can do that.

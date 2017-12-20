@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
+  get "/logout", to: "session#destroy"
 
   resources :users, only: [:new, :create, :show] do
     resources :gifs, only: [:index, :show] do
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
     resources :favorites, only: [:index, :show, :destroy]
   end
 
-  resources :categories, only: [:index, :show] do
+  resources :categories do
     resources :gifs, only: [:index, :show] do
     end
   end

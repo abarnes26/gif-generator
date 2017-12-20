@@ -1,1 +1,10 @@
 <h3> Welcome to your Gif Generator <%= current_user.username %>!</h3>
+
+<h4> Use the nav bar at the top to check out some cool gifs! </h4>
+
+<% if current_user.admin? %>
+  <h4> Greetings Admin </h4>
+  <%= link_to "Create Categories", new_admin_category_path %>
+  <%= link_to "Manage Existing Categories", admin_categories_path %>
+  <%= link_to "Generate Gifs", new_admin_gif_path %>
+<%end%>

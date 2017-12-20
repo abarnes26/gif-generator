@@ -8,14 +8,16 @@ describe "registered user logs in" do
           user = create(:user)
           visit "/"
 
-          click_on "Log In"
+          click_link "Log In"
 
           expect(current_path).to eql(login_path)
 
           fill_in "username", with: user.username
           fill_in "password", with: user.password
 
-          click_on "Log In"
+          save_and_open_page
+
+          click_button "Sign In"
 
           expect(page).to have_content("Welcome to your Gif Generator #{user.username}")
         end
