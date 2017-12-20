@@ -15,11 +15,9 @@ describe "registered user logs in" do
           fill_in "username", with: user.username
           fill_in "password", with: user.password
 
-          save_and_open_page
-
           click_button "Sign In"
 
-          expect(page).to have_content("Welcome to your Gif Generator #{user.username}")
+          expect(page).to have_content("Greetings #{user.username}")
         end
       end
     end

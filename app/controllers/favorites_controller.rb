@@ -2,7 +2,10 @@ class FavoritesController < ApplicationController
 
   def index
     if current_user
-       @favorites = Favorite.where(user_id: current_user.id)
+       @favorites  = Favorite.where(user_id: current_user.id)
+       @categories =  @favorites.map do |favorite|
+                       favorite.gif.category.name
+                      end
     else
       redirect_to new_user_path
     end
@@ -16,7 +19,7 @@ class FavoritesController < ApplicationController
     if current_user
       @favorite = Favorite.new(favorite_params)
       if @favorite.save
-        flash[:success] = "This gif has been added to your favorites!"
+        flash[:notice] = "This gif has been added to your favorites!"
         redirect_to gifs_path
       else
         flash[:notice] = "Sorry, something went wrong. Please select a different gif"

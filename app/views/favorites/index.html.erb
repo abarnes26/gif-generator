@@ -1,13 +1,19 @@
-<h3> Greetings <%=current_user.username%>!</h3>
+<h2> Greetings <%=current_user.username%>!</h2>
 
-<h4> Your Favorited Gifs:</h4>
+<h3> Your Favorited Gifs:</h3>
 
-<% @favorites.each do |favorite| %>
-  <% favorite.gif.category.gifs.each do |gif|%>
-    <h5><%= gif.category.name %></h5><br>
-    <% if favorite.gif_id == gif.id %>
-      <img src=<%= gif.image_path%>>
-      <%= button_to "Unfavorite This Gif", user_favorite_path(current_user, favorite), method: :delete%>
-    <%end%>
+<div class ="favorite-grid">
+  <% @categories.uniq.each do |category| %>
+    <div class ="favorite-category">
+    <h4>  <%=category%> </h4>
+      <div class ="favorite-unit">
+        <% @favorites.each do |favorite| %>
+          <% if favorite.gif.category.name == category%><br>
+            <img src=<%= favorite.gif.image_path%>>
+            <%= button_to "Unfavorite This Gif", user_favorite_path(current_user, favorite), method: :delete%>
+          <%end%>
+      </div>
+      <%end%>
+    </div>
   <%end%>
-<%end%>
+</div>

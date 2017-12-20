@@ -1,13 +1,15 @@
-<h3> All Gifs! </h3>
+<h2> All Gifs! </h2>
 
 <% @categories.each do |category| %>
-  <%= category.name %><br>
-  <% category.gifs.each do |gif|%>
-    <img src="<%= gif.image_path%>">
-    <% if current_user %>
-      <%= button_to "Favorite!", user_gif_favorites_path(current_user, gif), :method=>:post  %>
-    <% else %>
-      <%= button_to "Favorite!", new_user_path, method: :get %>
+  <% if category.gifs %>
+    <h3><%= category.name %><br></h3>
+    <% category.gifs.each do |gif|%>
+      <img src="<%= gif.image_path%>">
+      <% if current_user %>
+        <%= button_to "Favorite!", user_gif_favorites_path(current_user, gif), :method=>:post  %>
+      <% else %>
+        <%= button_to "Favorite!", new_user_path, method: :get %>
+      <%end%>
     <%end%>
   <%end%>
 <%end%>
