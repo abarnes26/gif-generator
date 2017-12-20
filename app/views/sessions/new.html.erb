@@ -1,15 +1,20 @@
-<h3> Enter your Username and Password to log in </h3>
 
-<%= form_tag do %>
+<div id="login-page">
+  <h3 id="login-title"> Enter your Username and Password to log in </h3>
+  <div id="login window">
 
-<%= label_tag :username %>
-<%= text_field_tag :username %>
+  <%= form_tag do %>
 
-<%= label_tag :password %>
-<%= password_field_tag :password %>
+  <%= label_tag :username %>
+  <%= text_field_tag :username %>
 
-<%= submit_tag "Sign In" %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
 
-<% end %>
+  <%= submit_tag "Sign In" %>
+
+  <% end %>
+  </div>
 
 <h4> Don't have an account? <%= link_to "Sign up here", new_user_path %> </h4>
+</div>

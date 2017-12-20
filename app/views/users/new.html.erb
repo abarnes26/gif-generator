@@ -1,6 +1,8 @@
-<h3> Create a New Account! </h3>
 
-<%= form_for @user do |f| %>
+<div id="sign-in-page">
+  <h3> Create a New Account! </h3>
+
+  <%= form_for @user do |f| %>
 
   <%= f.label :username %>
   <%= f.text_field :username %>
@@ -16,3 +18,4 @@
 <%end%>
 
 <h4> Already have an account? <%= link_to "Log In here", login_path %></h4>
+</div>
