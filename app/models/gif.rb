@@ -18,18 +18,3 @@ class Gif < ApplicationRecord
   end
 
 end
-
-
-
-# connection = GiphyClient::DefaultApi.new
-#   formatted_name = name.gsub(' ', '+')
-#   request = "/v1/gifs/search?q=#{formatted_name}&api_key=dc6zaTOxFJmzC&limit=1"
-#   result = api_instance.gifs_search_get(api_key, q, opts)
-#   image_path = JSON.parse(response.body)['data'].first['images']['original']['url']
-#   if image_path
-#      category = Category.find_by(name: name)
-#      Gif.new(image_path: image_path, category_id: category.id)
-#   else
-#     Gif.new
-#   end
-# end
