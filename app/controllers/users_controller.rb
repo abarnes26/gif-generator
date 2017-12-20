@@ -9,7 +9,7 @@ class UsersController<ApplicationController
     if @user.save
       flash[:success] = "You've successfully created an account!"
       session[:user_id] = @user.id
-      redirect_to user_path(@user)
+      redirect_to gifs_path
     else
       render :new
     end
