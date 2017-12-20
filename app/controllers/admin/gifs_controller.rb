@@ -18,7 +18,7 @@ class Admin::GifsController < Admin::BaseController
       flash[:success] = "Nice! You made a new Gif for #{category.name}!"
       redirect_to admin_gifs_path
     else
-      render :new
+      redirect_to admin_gifs_path
     end
   end
 
