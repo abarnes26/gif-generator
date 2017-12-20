@@ -1,5 +1,5 @@
 class Favorite < ApplicationRecord
-  validates :gif_id, presence: true, uniqueness: true
+  validates_uniqueness_of :gif_id, scope: :user_id
   belongs_to :user
   belongs_to :gif
 end
