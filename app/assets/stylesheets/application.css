@@ -134,7 +134,9 @@ h2 {
 }
 
 #greeting-text {
+  display: block;
   font-size: 20px;
   font-family: inherit;
   text-align: center;
+  border: 2px black solid;
 }
