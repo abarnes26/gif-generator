@@ -40,7 +40,7 @@
  }
 
 body {
-  background-image: url(low_poly_mountains.png);
+  background-image: url(../images/low_poly_mountains.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
