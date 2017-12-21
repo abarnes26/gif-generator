@@ -13,8 +13,7 @@ describe "A user is logged in" do
       expect(page).to have_content("All Gifs!")
 
       click_button "Favorite!"
-      
-      expect(current_path).to eql(gifs_path)
+
       expect(user.favorites.all.count).to eql(1)
     end
   end

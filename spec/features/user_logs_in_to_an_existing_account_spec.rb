@@ -17,7 +17,7 @@ describe "registered user logs in" do
 
           click_button "Sign In"
 
-          expect(page).to have_content("Greetings #{user.username}")
+          expect(page).to have_content("All Gifs")
         end
       end
     end

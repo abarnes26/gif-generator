@@ -20,10 +20,8 @@ class FavoritesController < ApplicationController
       @favorite = Favorite.new(favorite_params)
       if @favorite.save
         flash[:notice] = "This gif has been added to your favorites!"
-        redirect_to gifs_path
       else
         flash[:notice] = "Sorry, something went wrong. Please select a different gif"
-        redirect_to gifs_path
       end
     else
       redirect_to new_user_path

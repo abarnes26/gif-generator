@@ -17,7 +17,7 @@ describe "user signs up for account" do
 
           click_on "Create User"
 
-          expect(page).to have_content("Welcome to your Gif Generator Username1")
+          expect(page).to have_content("All Gifs")
         end
       end
     end
