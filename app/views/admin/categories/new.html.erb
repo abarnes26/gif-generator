@@ -1,10 +1,12 @@
+<div id="new-category">
 <h3> Create A New Category </h3>
 
 <%= form_for [:admin, @category] do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.label :name, class: "form-field" %>
+  <%= f.text_field :name, class: "form-field" %>
 
   <%= f.submit %>
 
 <% end %>
+</div>

@@ -2,8 +2,8 @@
 
 <%= form_for [:admin, @gif] do |f| %>
 
-  <%= f.label :category_id %>
-  <%= f.select :category_id, @categories.collect { |category| category.name } %>
+  <%= f.label :category_id, class: "form-field"  %>
+  <%= f.select :category_id, @categories.collect { |category| category.name }, class: "form-field"  %>
 
   <%= f.submit %>
 

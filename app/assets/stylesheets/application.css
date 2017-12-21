@@ -119,10 +119,11 @@ h2 {
 
 #landing-page {
   display: block;
-  background-color: #00CED1;
+  background-color: rgba(0, 206, 209, .9);
   margin-top: 150px;
   padding-top: 20px;
   padding-bottom: 20px;
+
 }
 
 #greeting {
@@ -140,4 +141,68 @@ h2 {
   text-align: center;
   border: 2px black solid;
   padding: 20px;
+}
+
+#new-category {
+  display: inline-flex;
+  background-color: #00FFFF;
+  flex-direction: column;
+  padding: 30px;
+  border: 2px solid black;
+  position: absolute;
+  left: 37%;
+  top: 33%;
+}
+
+.form-field:focus {
+  border: 3px solid #555;
+}
+
+#create-account-button {
+  transition-duration: 0.5s;
+  border-radius: 20%;
+  color: black;
+  padding: 7px;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+ .login-button {
+   transition-duration: 0.5s;
+   color: black;
+   padding: 7px;
+   text-decoration: none;
+   border: 1px solid black;
+ }
+
+#create-account-button:hover, .login-button:hover {
+  background-color: #00BFFF;
+  color: white;
+}
+
+#browse-links-button {
+  transition-duration: 0.5s;
+  border-radius: 10%;
+  color: black;
+  padding: 7px;
+  text-decoration: none;
+}
+
+#browse-links-button:hover {
+  background-color: LightPink;
+}
+
+#login-title {
+}
+
+.create-new {
+  transition-duration: 0.5s;
+  color: black;
+  padding: 7px;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+.create-new:hover {
+  background-color: #00FF7F;
 }

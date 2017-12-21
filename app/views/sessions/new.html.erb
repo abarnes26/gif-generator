@@ -5,7 +5,7 @@
 
   <%= form_tag do %>
 
-  <%= label_tag :username %>
+  <%= label_tag :username  %>
   <%= text_field_tag :username %>
 
   <%= label_tag :password %>
@@ -16,5 +16,5 @@
   <% end %>
   </div>
 
-<h4> Don't have an account? <%= link_to "Sign up here", new_user_path %> </h4>
+<h4> Don't have an account? <%= link_to "Sign up here", new_user_path, class: "login-button" %> </h4>
 </div>
